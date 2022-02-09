@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function dom(metraz_k,ilosc_pokoi_k,cena_k)
+            {
+                this.metraz=metraz_k;
+                this.ilosc_pokoi=ilosc_pokoi_k;
+                this.cena=cena_k;
+            }
+            dom.prototype.wypisz = function ()
+            {
+                alert(this.metraz + ' ' + this.ilosc_pokoi+ ' ' + this.cena);
+            };
+            var dom1 = new dom("Metraż: 160 m^2 <br>", "Liczba pokoi: 7 <br>", "Cena: 9500 zł/m^2");
+            var dom2 = new dom('Metraż: 80 m^2 <br>', 'Liczba pokoi: 4 <br>', 'Cena: 15500 zł/m^2');
+            dom1.wypisz();
+            dom2.wypisz();
+            document.write("dostęp do właściwości"+"<br>");
+            
+            document.write("Dom pierwszy:"+" "+dom1.metraz+" "+dom1.ilosc_pokoi+" "+dom1.cena+"<br>");
+            document.write("Dom drugi:"+" "+dom2.metraz+" "+dom2.ilosc_pokoi+" "+dom2.cena);
+        </script>
+    </head>
+    <body>
+        <br>
+        programowanie obiektowe
+    </body>
+</html>
